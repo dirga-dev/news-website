@@ -1,0 +1,13 @@
+body {
+	background: #ffffff;
+}
+
+imageku {
+	height: 10rem;
+	width: auto;
+}
+
+/* .movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+} */
