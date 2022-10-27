@@ -2,7 +2,7 @@ import { Row } from "react-bootstrap";
 import { Card, Button, Col} from "react-bootstrap";
 import '../App.css';
 
-const NewsList = (props) => {
+const Home = (props) => {
   
   return(
     <div>
@@ -29,4 +29,4 @@ const NewsList = (props) => {
   )
 }
 
-export default NewsList;
+export default Home;
