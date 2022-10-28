@@ -6,7 +6,6 @@ import SidebarRight from './components/SidebarRight';
 import CovidNews from './pages/Covid/Covid';
 import ProgrammingNews from './pages/Programming/Programming';
 import Saved from './pages/Saved/Saved'
-import AboutUs from './pages/AboutProgress/AboutUs';
 import Footer from './components/Footer/Footer';
 import IndonesiaPage from './pages/Indonesia/Indonesia';
 import AllPage from './pages/All/All';
