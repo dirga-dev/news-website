@@ -1,13 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.navigation {
+  background-color: white;
+}
+
+.sidebar-left {
+  background: white;
+  height: 100%;
+  width: 350px;
+  position: fixed;
+  z-index: 1;
+  overflow-y: auto;
+  border-right: 1px solid #BCBCBC;
+}
+
+
+.feature-content {
+  padding-top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.feature-content > .card-feature-content{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-bottom: 1px solid #BCBCBC;
+  width: 700px!important;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.feature-content > .card-feature-content > .top-card{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  transition: .4s;
+}
+
+.feature-content > .card-feature-content > .top-card:hover{
+  color: #999;
+}
+
+.top-card > .left-top-card{
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+
+.top-card > .left-top-card > .title{
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.top-card > .left-top-card > p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.top-card > .right-top-card{
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.top-card > .right-top-card > img{
+  width: 230px;
+}
+
+.bottom-card{
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-card > p > span{
+  color: #BCBCBC;
+}
+
+.sidebar-content {
+  margin-left: 90px;
+  margin-top: 100px;
+  width: auto;
+  height: auto;
+}
+
+.sidebar-content-first-row {
+  margin-bottom: 11px ;
+}
+
+.sidebar-content-search{
+  width: 100%;
+}
+
+.sidebar-content-search > input{
+  width: 100%;
+  border-radius: 20px;
+  outline-style: none;
+  border: 1px solid #BCBCBC;
+  padding: 5px 20px;
+}
+
+.page-content, .active{
+  margin: 5px;
+  padding: 3px 18px;
+  border: 1.5px solid #222222;
+  border-radius: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  transition: .45s;
+}
+
+.active{ 
+  background-color: #222212;
+  color: #fff!important;
+}
+
+.page-content:hover, .page-content:focus {
+  background-color: #222222;
+  color: white;
+}
+
+.sidebar-right {
+  height: 100%;
+  width: 350px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1;
+  border-left: 1px solid lightgray;
+}
+
+.sidebar-right-content {
+  margin-top: 100px;
+  margin-left: 25px;
+  margin-right: 130px;
+}
+
+.sidebar-content-click-me {
+  padding-top: 20px;
+}
+
+.sidebar-content-about-us {
+  text-align: center;
+  border-top: lightgray 1px solid;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+.page-content-about {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 15px;
+  transition: .45s;
+}
+
+.page-content-about:hover {
+  color: black;
+}
+
+.brand-image {
+  margin-left: -10px;
+  width: 1.5em !important;
+}
+
+.about-us {
+  background-color: white;
+  width: 500px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+
+.about-us-content {
+  display: flex;
+}
+
+.about-us-data {
+  margin-top: 85px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 10px;
+
+}
+
+.about-us-data img {
+  width: 5em;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.about-us-progress {
+  flex: 1;
+  font-family: 'Jost', sans-serif;
+  margin: auto;
+}
+
+.about-progress {
+  background-image: url(./assets/background-image.png);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.progress-container-one {
+  margin-top: 60px;
+  margin-right: 40px;
+}
+
+.progress-container-two {
+  margin-top: 60px;
+  margin-right: 40px;
+  
+}
+
+.progress-container-three {
+  margin-top: 60px;
+  margin-right: 40px;
+}
+
+.about-us-progress p {
+  border-bottom: #495057 solid 1px;
+}
+
+.about-us-title {
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  background-color: white;
+  font-family: 'Jost', sans-serif;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.main-footer {
+  z-index: 2;
+  background-color: white;
+  margin-top: 12%;
+  padding-top: 2em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: lightgray 1px solid;
+}
+
+h2{
+    padding-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    font-family: 'Jost', sans-serif;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h3{
+  padding-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  font-family: 'Jost', sans-serif;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.category-title {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.container-pagination {
+  padding-top: 0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+.page-link {
+  color: white !important;
+  display: inline-block;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  margin: 5px;
+  background-color: black !important;
+}
+
+.page-link:hover, .page-link:focus {
+  background-color: white !important;
+  color: black !important;
+}
+
+button{
+  background-color: white !important;
+  color: black;
+  border: none !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
