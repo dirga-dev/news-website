@@ -1,37 +1,31 @@
-import { Container } from 'react-bootstrap';
-import NavBar from './components/NavBar';
-import Home from './pages/Home';
-import React, { useEffect, useState } from "react";
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Route, Routes } from 'react-router-dom';
+import Navigation from './components/Navbar';
+import SidebarLeft from './components/SidebarLeft';
+import SidebarRight from './components/SidebarRight';
+import CovidNews from './pages/Covid/Covid';
+import ProgrammingNews from './pages/Programming/Programming';
+import Saved from './pages/Saved/Saved'
+import AboutUs from './pages/AboutProgress/AboutUs';
+import Footer from './components/Footer/Footer';
+import IndonesiaPage from './pages/Indonesia/Indonesia';
+import AllPage from './pages/All/All';
+
 
 function App() {
-  const [articles, setArticles] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
-
-  const getArticleRequest = async (searchValue) => {
-    //pilih salah satu yang aktif
-		const url = `https://newsapi.org/v2/top-headlines?q=${searchValue}&country=id&from=2022-10-05&sortBy=publishedAt&apiKey=ba0034918a84489e875d313212d04e19`;
-		// const url = `https://newsapi.org/v2/top-headlines?q=${searchValue}&country=id&from=2022-10-05&sortBy=publishedAt&apiKey=138b25dd620d4a9d82f908a5fb7a9edf`;
-
-		const response = await fetch(url);
-		const responseJson = await response.json();
-
-		if (responseJson.articles) {
-			setArticles(responseJson.articles);
-		}
-	};
-
-	useEffect(() => {
-		getArticleRequest(searchValue);
-	}, [searchValue]);
-
   return (
-    <div>
-        <NavBar searchValue={searchValue} setSearchValue={setSearchValue} />
-        <Container style={{marginTop: 20}}>
-          <h1 style={{textAlign: 'center'}}>NEWS</h1>
-          <Home articles={articles} />
-        </Container>
+    <div className="App">
+      <Navigation/>
+      <SidebarLeft/>
+      <SidebarRight />
+      <Routes>
+        <Route path="/all" element={<AllPage />} />
+        <Route path="/" element={<IndonesiaPage />} />
+        <Route path="/programming" element={<ProgrammingNews />} />
+        <Route path="/covid19" element={<CovidNews />} />
+        <Route path="/saved" element={<Saved/>} />
+      </Routes>
+      <Footer/>
     </div>
   );
 }
