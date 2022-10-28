@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/NavBar';
 import SidebarLeft from './components/SidebarLeft';
-import SidebarRight from './components/SidebarRight';
 import CovidNews from './pages/Covid/Covid';
 import ProgrammingNews from './pages/Programming/Programming';
 import Saved from './pages/Saved/Saved'
@@ -16,7 +15,6 @@ function App() {
     <div className="App">
       <Navigation/>
       <SidebarLeft/>
-      <SidebarRight />
       <Routes>
         <Route path="/all" element={<AllPage />} />
         <Route path="/" element={<IndonesiaPage />} />
