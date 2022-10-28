@@ -16,7 +16,7 @@ const AllPage = () => {
 		(async () => {
 			const res = await axios.get(
 // 				`https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=84de37a1a2054cc18bafae4caa2694fe`
-				`https://newsapi.org/v2/top-headlines?}&country=id&sortBy=publishedAt&apiKey=ba0034918a84489e875d313212d04e19`
+				`https://newsapi.org/v2/top-headlines?country=id&sortBy=publishedAt&apiKey=ba0034918a84489e875d313212d04e19`
 			);
 
 			setNews(res.data.articles);
